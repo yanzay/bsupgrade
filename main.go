@@ -14,6 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	bot.Handle("/start", "Forward your 🏘 Buildings here")
 	bot.HandleDefault(parserHandler)
 	bot.ListenAndServe()
 }

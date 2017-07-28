@@ -60,5 +60,5 @@
   name = "github.com/yanzay/log"
 
 [[dependencies]]
-  branch = "extend-message"
+  branch = "master"
   name = "github.com/yanzay/tbot"

@@ -1,10 +1,10 @@
-memo = "e2361eeb4268d3beb2713a8edb555ca0a7e040e6ce053c0921ec64d530beefe7"
+memo = "9e75e32e546b091b12606e0cbafb234a8fae6a9002460c91cf86b335408a8596"
 
 [[projects]]
   branch = "master"
   name = "github.com/go-telegram-bot-api/telegram-bot-api"
   packages = ["."]
-  revision = "e4602014c78ff0d323bb30f38ae0f90afdb96ad6"
+  revision = "13c54dc548f7ca692fe434d4b7cac072b0de0e0b"
 
 [[projects]]
   branch = "master"
@@ -16,7 +16,7 @@ memo = "e2361eeb4268d3beb2713a8edb555ca0a7e040e6ce053c0921ec64d530beefe7"
   branch = "master"
   name = "github.com/yanzay/bstools"
   packages = ["."]
-  revision = "2f5c4bf07bbfef7c8888a926ddf2ca3cab7db93b"
+  revision = "e63d8abaa63997b1dbeeed3649995863c87d6923"
 
 [[projects]]
   branch = "master"
@@ -25,7 +25,7 @@ memo = "e2361eeb4268d3beb2713a8edb555ca0a7e040e6ce053c0921ec64d530beefe7"
   revision = "87352bb235060cca8427c8f9fdd68c83b38ba461"
 
 [[projects]]
-  branch = "extend-message"
+  branch = "master"
   name = "github.com/yanzay/tbot"
-  packages = [".","internal/adapter"]
-  revision = "472d3221bb8dd198577abc62845e5fa9747f7d42"
+  packages = [".","internal/adapter","model"]
+  revision = "7899020a3b6e3fde905ee750592f369a867c61d7"

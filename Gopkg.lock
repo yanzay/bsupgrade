@@ -1,0 +1,31 @@
+memo = "e2361eeb4268d3beb2713a8edb555ca0a7e040e6ce053c0921ec64d530beefe7"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/go-telegram-bot-api/telegram-bot-api"
+  packages = ["."]
+  revision = "e4602014c78ff0d323bb30f38ae0f90afdb96ad6"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/technoweenie/multipartstreamer"
+  packages = ["."]
+  revision = "a90a01d73ae432e2611d178c18367fbaa13e0154"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/yanzay/bstools"
+  packages = ["."]
+  revision = "2f5c4bf07bbfef7c8888a926ddf2ca3cab7db93b"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/yanzay/log"
+  packages = ["."]
+  revision = "87352bb235060cca8427c8f9fdd68c83b38ba461"
+
+[[projects]]
+  branch = "extend-message"
+  name = "github.com/yanzay/tbot"
+  packages = [".","internal/adapter"]
+  revision = "472d3221bb8dd198577abc62845e5fa9747f7d42"

@@ -53,6 +53,10 @@
 
 [[dependencies]]
   branch = "master"
+  name = "github.com/boltdb/bolt"
+
+[[dependencies]]
+  branch = "master"
   name = "github.com/yanzay/bstools"
 
 [[dependencies]]

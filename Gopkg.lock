@@ -1,4 +1,10 @@
-memo = "9e75e32e546b091b12606e0cbafb234a8fae6a9002460c91cf86b335408a8596"
+memo = "492b8f469289e9a80d763158c6ce071a1ac3ea64758b6f5a8aea520834c326fa"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/boltdb/bolt"
+  packages = ["."]
+  revision = "e9cf4fae01b5a8ff89d0ec6b32f0d9c9f79aefdd"
 
 [[projects]]
   branch = "master"
@@ -16,7 +22,7 @@ memo = "9e75e32e546b091b12606e0cbafb234a8fae6a9002460c91cf86b335408a8596"
   branch = "master"
   name = "github.com/yanzay/bstools"
   packages = ["."]
-  revision = "e63d8abaa63997b1dbeeed3649995863c87d6923"
+  revision = "bdd46babbcb069d7f90f962d20480eb6a5032296"
 
 [[projects]]
   branch = "master"
@@ -28,4 +34,10 @@ memo = "9e75e32e546b091b12606e0cbafb234a8fae6a9002460c91cf86b335408a8596"
   branch = "master"
   name = "github.com/yanzay/tbot"
   packages = [".","internal/adapter","model"]
-  revision = "7899020a3b6e3fde905ee750592f369a867c61d7"
+  revision = "711a504f8eb8fb1e0aca2e3b64e10cfdadbb0fc3"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  revision = "c200b10b5d5e122be351b67af224adc6128af5bf"

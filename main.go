@@ -30,7 +30,7 @@ Time to upgrade: %s
 var bStore *BuildStore
 
 var (
-	dbFile = flag.String("db", "bsupgrade.db", "Database file name")
+	dbFile = flag.String("data", "bsupgrade.db", "Database file name")
 )
 
 func main() {

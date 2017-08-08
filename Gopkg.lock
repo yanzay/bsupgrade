@@ -22,7 +22,7 @@ memo = "492b8f469289e9a80d763158c6ce071a1ac3ea64758b6f5a8aea520834c326fa"
   branch = "master"
   name = "github.com/yanzay/bstools"
   packages = ["."]
-  revision = "bdd46babbcb069d7f90f962d20480eb6a5032296"
+  revision = "e073cea5dd81d5301d0f2e67f1bea0c4210eb118"
 
 [[projects]]
   branch = "master"

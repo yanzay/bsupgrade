@@ -52,14 +52,14 @@ func parserHandler(m *tbot.Message) {
 		m.Reply(err.Error())
 		return
 	}
-	savedState := bStore.GetBuildings(m.From.UserName)
+	savedState := bStore.GetBuildings(fmt.Sprint(m.From.ID))
 	if err != nil {
 		m.Reply(err.Error())
 		return
 	}
 	state.Merge(savedState)
 	log.Infof(fmt.Sprint(state))
-	bStore.SaveBuildings(m.From.UserName, state)
+	bStore.SaveBuildings(fmt.Sprint(m.From.ID), state)
 	err = state.Valid()
 	if err != nil {
 		m.Reply(err.Error())

@@ -63,6 +63,7 @@ func parserHandler(m *tbot.Message) {
 	err = state.Valid()
 	if err != nil {
 		m.Reply(err.Error())
+		m.Reply("Forward your 🏘 Buildings and ⚒ Workshop here")
 		return
 	}
 	balUp := state.BalancedUpgrade()

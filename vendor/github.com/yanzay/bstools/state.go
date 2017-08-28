@@ -230,6 +230,11 @@ func (s State) storageFitUpgrade(upType string) (*Upgrade, bool) {
 	if up.Wood > storageCap || up.Stone > storageCap {
 		return nil, false
 	}
+	if upType == Mine || upType == Farm || upType == Sawmill {
+		if s[upType] >= s[Storage] {
+			return nil, false
+		}
+	}
 	return up, true
 }
 

@@ -205,7 +205,7 @@ func (s State) calcPayback(upType string) time.Duration {
 		price += s.calcUpgrade(Storage).TotalCost()
 	}
 	delta := s.IncomeDelta(upType)
-	if delta != 0 {
+	if delta > 0 {
 		return time.Duration(price/delta) * time.Minute
 	}
 	return math.MaxInt64

@@ -75,6 +75,9 @@ func (s State) BalancedUpgrade() *Upgrade {
 			recommend = Storage
 		}
 	}
+	if _, ok := s.storageFitUpgrade(recommend); !ok {
+		return s.calcUpgrade(Storage)
+	}
 	return s.calcUpgrade(recommend)
 }
 

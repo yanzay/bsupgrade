@@ -24,6 +24,15 @@ var allBuilds = []string{
 	Trebuchet,
 }
 
+var farmBuilds = []string{
+	Townhall,
+	Storage,
+	Houses,
+	Farm,
+	Sawmill,
+	Mine,
+}
+
 var coefs = map[string]Coef{
 	Townhall:  Coef{Gold: 500, Wood: 200, Stone: 200},
 	Storage:   Coef{Gold: 200, Wood: 100, Stone: 100},
@@ -247,6 +256,15 @@ func (s State) gpm() int {
 
 func (s State) Valid() error {
 	for _, build := range allBuilds {
+		if s[build] == 0 {
+			return fmt.Errorf("I need to know your %s", build)
+		}
+	}
+	return nil
+}
+
+func (s State) ValidFarm() error {
+	for _, build := range farmBuilds {
 		if s[build] == 0 {
 			return fmt.Errorf("I need to know your %s", build)
 		}

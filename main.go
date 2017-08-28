@@ -27,6 +27,13 @@ Upgrade %s
 Time to upgrade: %s
 `
 
+var farmTemplate = `Passive Income:
+Upgrade %s
+%s
+Income increase: %d gold/min
+Time to upgrade: %s
+`
+
 var bStore *BuildStore
 
 var (
@@ -62,6 +69,10 @@ func parserHandler(m *tbot.Message) {
 	bStore.SaveBuildings(fmt.Sprint(m.From.ID), state)
 	err = state.Valid()
 	if err != nil {
+		if state.ValidFarm() == nil {
+			farmUpgrade(m, state)
+			return
+		}
 		m.Reply(err.Error())
 		m.Reply("Forward your 🏘 Buildings and ⚒ Workshop here")
 		return
@@ -76,6 +87,14 @@ func parserHandler(m *tbot.Message) {
 		batUp.Type, printPrice(batUp), batUp.Duration)
 	m.Reply("```\n"+reply+"```", tbot.WithMarkdown)
 	log.Infof("Recommendation: %s, %s, %s", balUp.Type, rushUp.Type, batUp.Type)
+}
+
+func farmUpgrade(m *tbot.Message, state bstools.State) {
+	balUp := state.BalancedUpgrade()
+	reply := fmt.Sprintf(farmTemplate,
+		balUp.Type, printPrice(balUp), state.IncomeDelta(balUp.Type), balUp.Duration)
+	m.Reply("```\n"+reply+"```", tbot.WithMarkdown)
+	log.Infof("Recommendation: %s", balUp.Type)
 }
 
 func printPrice(up *bstools.Upgrade) string {
